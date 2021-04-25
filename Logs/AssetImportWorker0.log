@@ -3890,3 +3890,35 @@ Total: 3.549576 ms (FindLiveObjects: 0.431086 ms CreateObjectMapping: 0.167976 m
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 20.25 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 19 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 179.8 MB.
+System memory in use after: 180.0 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 4196.
+Total: 30.121527 ms (FindLiveObjects: 4.058279 ms CreateObjectMapping: 0.319120 ms MarkObjects: 25.639242 ms  DeleteObjects: 0.103064 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 2855.842434 seconds.
+  path: Assets/logo.png
+  artifactKey: Guid(faa15503382214f138b40cc82f34ff15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/logo.png using Guid(faa15503382214f138b40cc82f34ff15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '700b286649cf2220bad97724e50cca11') in 2.932074 seconds
+  Import took 3.168652 seconds .
+
+========================================================================
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 96.24 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 19 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 186.4 MB.
+System memory in use after: 186.6 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 4198.
+Total: 291.854447 ms (FindLiveObjects: 9.879283 ms CreateObjectMapping: 0.507448 ms MarkObjects: 278.658501 ms  DeleteObjects: 2.804793 ms)
+
