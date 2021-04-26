@@ -16,9 +16,9 @@
                 "UnityUseLocationNotificationTrigger"
             ],
             "m_Values": [
-                "True",
+                "False",
                 "7",
-                "True",
+                "False",
                 "True",
                 "-1",
                 "False",
