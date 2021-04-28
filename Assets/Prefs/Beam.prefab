@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 3403267208235104665}
   - component: {fileID: -4662909338858025182}
   - component: {fileID: 1507555962813396810}
+  - component: {fileID: 3455968609691125375}
+  - component: {fileID: -8354601186988096790}
   m_Layer: 0
   m_Name: Beam
   m_TagString: Untagged
@@ -145,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65a73c1bb29f94f1f9f36ea8da62d6f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doubleTouchDelay: 0.8
 --- !u!114 &1507555962813396810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,3 +189,35 @@ MonoBehaviour:
   - {x: 1.1215069, y: -0.4867061, z: 0}
   - {x: 1.1214951, y: 0.49999985, z: 0}
   - {x: -1.1215099, y: 0.49999985, z: 0}
+--- !u!114 &3455968609691125375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3403267208235104662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75953d6b31f574644be1238b08e89b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allowRuntimeFragmentation: 1
+  extraPoints: 3
+  subshatterSteps: 1
+  fragmentLayer: Default
+  sortingLayerName: Default
+  orderInLayer: 0
+  shatterType: 1
+  fragments: []
+--- !u!114 &-8354601186988096790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3403267208235104662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ba82bd3b2dd68c41b9ca0ef73da7ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

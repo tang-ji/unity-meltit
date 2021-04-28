@@ -9,7 +9,9 @@ public class Element : MonoBehaviour
 
     private Vector3 offset, initialTouched0, initialTouched1, currentTouched0, currentTouched1;
     bool isTouched, isMultiTouched, isSelected, validMultiplier;
-    
+    private float lastTouchtime;
+    public float doubleTouchDelay;
+    private Explodable _explodable;
 
     Quaternion initialRotation;
     float initialAngle, currentAngle, initialDistance, currentDistance, intialMultiplier, currentMultiplier;
@@ -24,6 +26,8 @@ public class Element : MonoBehaviour
         intialMultiplier = currentMultiplier = 1;
         initial_scale = transform.localScale;
         validMultiplier = false;
+        lastTouchtime = -10;
+        _explodable = GetComponent<Explodable>();
     }
 
     void Update()
@@ -95,11 +99,22 @@ public class Element : MonoBehaviour
 
     }
 
+    bool DoubleTouched()
+    {
+        if(Time.fixedTime - lastTouchtime < doubleTouchDelay) return true;
+        lastTouchtime = Time.fixedTime;
+        return false;
+    }
+
     void OnMouseDown()
     {
         GetComponent<Rigidbody2D>().isKinematic = true;
+        if(DoubleTouched())
+        {
+            _explodable.explode();
+        } 
         isSelected = true;
-        
+
     }
 
     void OnMouseUp()
@@ -110,10 +125,15 @@ public class Element : MonoBehaviour
         validMultiplier = false;
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        _explodable.explode();
+    }
 
 
     public void Destroy()
     {
     	gameObject.SetActive(false);
+        Destroy(this.gameObject);
     }
 }
