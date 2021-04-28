@@ -28,6 +28,7 @@ public class Element : MonoBehaviour
         validMultiplier = false;
         lastTouchtime = -10;
         _explodable = GetComponent<Explodable>();
+        Physics2D.IgnoreLayerCollision(5, 6, true);
     }
 
     void Update()
@@ -123,11 +124,6 @@ public class Element : MonoBehaviour
         GetComponent<Rigidbody2D>().isKinematic = false;
         isTouched = false;
         validMultiplier = false;
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        _explodable.explode();
     }
 
 

@@ -16,7 +16,9 @@ GameObject:
   - component: {fileID: 8786929226298470527}
   - component: {fileID: -6626580874113214340}
   - component: {fileID: -4914194468790689640}
-  m_Layer: 0
+  - component: {fileID: 6794464883991553358}
+  - component: {fileID: -5879553726795517463}
+  m_Layer: 6
   m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,10 +255,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allowRuntimeFragmentation: 1
-  extraPoints: 3
-  subshatterSteps: 1
+  extraPoints: 0
+  subshatterSteps: 0
   fragmentLayer: Default
   sortingLayerName: Default
   orderInLayer: 0
-  shatterType: 1
+  shatterType: 0
   fragments: []
+--- !u!114 &6794464883991553358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2209390523603948296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c037c84bace504697edb2369c9dfc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-5879553726795517463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2209390523603948296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe1183b420bf4c4d9130529db96a297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glassbreak: {fileID: 8300000, guid: 76b18f60c7ef71f4da478ce9b15d25e5, type: 3}

@@ -10,7 +10,7 @@ public class Buttons : MonoBehaviour
 
 	public GameObject prefab, instant_prefab;
 
-	Explodable[] _elements;
+	GameObject[] _elements;
 
 
     void Start()
@@ -54,10 +54,10 @@ public class Buttons : MonoBehaviour
 
     public void ResetButtonTouch()
  	{
- 		_elements = FindObjectsOfType<Explodable>();
+ 		_elements = GameObject.FindGameObjectsWithTag("Clone");
  		foreach (var element in _elements)
  		{
- 			element.Destroy();
+ 			Destroy(element);
  			
  		}
  	}
