@@ -15,12 +15,11 @@ GameObject:
   - component: {fileID: -4662909338858025182}
   - component: {fileID: 1507555962813396810}
   - component: {fileID: 3455968609691125375}
-  - component: {fileID: -8354601186988096790}
   - component: {fileID: 2393525301714412303}
   - component: {fileID: 3112728484480580534}
   m_Layer: 6
   m_Name: Beam
-  m_TagString: Untagged
+  m_TagString: Clone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,18 +210,6 @@ MonoBehaviour:
   orderInLayer: 0
   shatterType: 1
   fragments: []
---- !u!114 &-8354601186988096790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3403267208235104662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ba82bd3b2dd68c41b9ca0ef73da7ad2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2393525301714412303
 MonoBehaviour:
   m_ObjectHideFlags: 0

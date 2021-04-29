@@ -47,7 +47,8 @@ public class Explodable : MonoBehaviour
         //if fragments exist destroy the original
         if (fragments.Count > 0)
         {
-            Destroy(gameObject);
+            // Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
     /// <summary>

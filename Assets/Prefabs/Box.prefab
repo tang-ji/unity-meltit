@@ -15,12 +15,11 @@ GameObject:
   - component: {fileID: 2383813173496029778}
   - component: {fileID: 3151252676936973700}
   - component: {fileID: 6810923390735267219}
-  - component: {fileID: 6838188051505570661}
   - component: {fileID: 8065087762374353351}
   - component: {fileID: -1517613203690023442}
   m_Layer: 6
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Clone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,18 +210,6 @@ MonoBehaviour:
   orderInLayer: 0
   shatterType: 1
   fragments: []
---- !u!114 &6838188051505570661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3559480484410037478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ba82bd3b2dd68c41b9ca0ef73da7ad2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8065087762374353351
 MonoBehaviour:
   m_ObjectHideFlags: 0

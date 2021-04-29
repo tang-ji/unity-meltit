@@ -11,7 +11,7 @@ public class FragileElement : MonoBehaviour
     private GameObject soundplayer;
     private float lowPitchRange = .75F;
     private float highPitchRange = 1.5F;
-    private float velToVol = .1F;
+    private float velToVol = .05F;
     private float velocityClipSplit = 10F;
 
     void Awake () {

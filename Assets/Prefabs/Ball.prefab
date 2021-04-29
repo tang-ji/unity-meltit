@@ -13,14 +13,13 @@ GameObject:
   - component: {fileID: 2209390523603948295}
   - component: {fileID: 1070032821148820924}
   - component: {fileID: 4931390923424666903}
-  - component: {fileID: 8786929226298470527}
   - component: {fileID: -6626580874113214340}
   - component: {fileID: -4914194468790689640}
   - component: {fileID: 6794464883991553358}
   - component: {fileID: -5879553726795517463}
   m_Layer: 6
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Clone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,18 +164,6 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &8786929226298470527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2209390523603948296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ba82bd3b2dd68c41b9ca0ef73da7ad2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!60 &-6626580874113214340
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -286,4 +273,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbe1183b420bf4c4d9130529db96a297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glassbreak: {fileID: 8300000, guid: 76b18f60c7ef71f4da478ce9b15d25e5, type: 3}
