@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FragileElement : MonoBehaviour
+public class Level1Ground : MonoBehaviour
 {
     private Explodable _explodable;
 
@@ -15,10 +15,6 @@ public class FragileElement : MonoBehaviour
 
     void Awake () {
         glassbreak = Resources.Load<AudioClip>("glassBreak3");
-        glasshit1 = Resources.Load<AudioClip>("glassHit1");
-        glasshit2 = Resources.Load<AudioClip>("glassHit2");
-        // audiosource = GetComponent<AudioSource>();   
-        // if (audiosource == null) audiosource = gameObject.AddComponent<AudioSource>();  
     }
 
     void Start()
@@ -40,14 +36,22 @@ public class FragileElement : MonoBehaviour
     {
         float v = collision.relativeVelocity.magnitude, m = GetComponent<Rigidbody2D>().mass, M;
         try{M = collision.gameObject.GetComponent<Rigidbody2D>().mass;} catch(MissingComponentException e) {M = 1000;}
-
-        // playSound(glasshit2, collision);
         
         if (M * v / (M + m)  > 2)
         {
             playSound(glassbreak, collision);
+            GameObject.Find("Menu").AddComponent<BoxCollider2D>();
+            GameObject.Find("Menu").AddComponent<Rigidbody2D>();
+            GameObject.Find("Ball").AddComponent<Rigidbody2D>();
+            GameObject.Find("Beam").AddComponent<Rigidbody2D>();
+            GameObject.Find("Box").AddComponent<Rigidbody2D>();
+            Explodable ep = GameObject.Find("Menu").AddComponent<Explodable>();
+            ep.extraPoints = 5;
+            ep.subshatterSteps = 1;
+            ep.allowRuntimeFragmentation = true;
             UnityEditor.EditorApplication.delayCall+=()=>
             {
+                ep.explode();
                 _explodable.explode();
             };
         }

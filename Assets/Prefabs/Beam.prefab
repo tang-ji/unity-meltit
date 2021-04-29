@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 3403267208235104663}
   - component: {fileID: 3403267208235104666}
   - component: {fileID: 3403267208235104665}
-  - component: {fileID: -4662909338858025182}
   - component: {fileID: 1507555962813396810}
   - component: {fileID: 3455968609691125375}
   - component: {fileID: 2393525301714412303}
   - component: {fileID: 3112728484480580534}
+  - component: {fileID: 5214341598226972306}
   m_Layer: 6
   m_Name: Beam
   m_TagString: Clone
@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 3403267208235104662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1300, y: 250, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalScale: {x: 0.5, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -136,19 +136,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-4662909338858025182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3403267208235104662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65a73c1bb29f94f1f9f36ea8da62d6f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleTouchDelay: 0.8
 --- !u!114 &1507555962813396810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,5 +219,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbe1183b420bf4c4d9130529db96a297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5214341598226972306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3403267208235104662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d2d074b87bd934d8535b7ebdccd7d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -10,7 +10,9 @@ public class Element : MonoBehaviour
     private Vector3 offset, initialTouched0, initialTouched1, currentTouched0, currentTouched1;
     bool isTouched, isMultiTouched, isSelected, validMultiplier;
     private float lastTouchtime;
+    
     public float doubleTouchDelay;
+    public bool doubleTouchExplode;
     private Explodable _explodable;
 
     Quaternion initialRotation;
@@ -110,7 +112,7 @@ public class Element : MonoBehaviour
     void OnMouseDown()
     {
         GetComponent<Rigidbody2D>().isKinematic = true;
-        if(DoubleTouched())
+        if(DoubleTouched() && doubleTouchExplode)
         {
             _explodable.explode();
         } 
