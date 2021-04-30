@@ -46,14 +46,13 @@ public class Level1Ground : MonoBehaviour
             GameObject.Find("Beam").AddComponent<Rigidbody2D>();
             GameObject.Find("Box").AddComponent<Rigidbody2D>();
             Explodable ep = GameObject.Find("Menu").AddComponent<Explodable>();
-            ep.extraPoints = 5;
+            GameObject.Find("Bubble.Support").SetActive(false);
+            ep.shatterType = Explodable.ShatterType.Voronoi;
+            ep.extraPoints = 7;
             ep.subshatterSteps = 1;
             ep.allowRuntimeFragmentation = true;
-            UnityEditor.EditorApplication.delayCall+=()=>
-            {
-                ep.explode();
-                _explodable.explode();
-            };
+            ep.explode();
+            _explodable.explode();
         }
         
     }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
@@ -44,13 +45,12 @@ public class Buttons : MonoBehaviour
  		isPlaying = !isPlaying;
  	}
 
- 	public void AddButtonTouch()
+ 	public void RestartButtonTouch()
  	{
- 		instant_prefab = GameObject.Instantiate(prefab);
- 		// gameObject.transform.position = position;
-    	// gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+		Physics2D.gravity = new Vector3(0, -9.81F, 0);
+		SceneManager.LoadScene("level_1");
+ 		// Application.LoadLevel("level_1");
  	}
-
 
     public void ResetButtonTouch()
  	{
@@ -61,4 +61,5 @@ public class Buttons : MonoBehaviour
  			
  		}
  	}
+
 }

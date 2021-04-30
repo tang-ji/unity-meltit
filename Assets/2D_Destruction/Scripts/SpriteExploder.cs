@@ -74,7 +74,7 @@ public static class SpriteExploder {
             foreach (GameObject piece in pieces)
             {
                 morePieces.AddRange(SpriteExploder.GenerateTriangularPieces(piece, extraPoints, subshatterSteps, mat));
-                GameObject.DestroyImmediate(piece);
+                GameObject.Destroy(piece);
             }
         }
         else
@@ -223,7 +223,7 @@ public static class SpriteExploder {
             foreach (GameObject piece in pieces)
             {
                 morePieces.AddRange(SpriteExploder.GenerateVoronoiPieces(piece, extraPoints, subshatterSteps));
-                GameObject.DestroyImmediate(piece);
+                GameObject.Destroy(piece);
             }
         }
         else

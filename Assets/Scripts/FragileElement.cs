@@ -46,10 +46,7 @@ public class FragileElement : MonoBehaviour
         if (M * v / (M + m)  > 2)
         {
             playSound(glassbreak, collision);
-            UnityEditor.EditorApplication.delayCall+=()=>
-            {
-                _explodable.explode();
-            };
+            _explodable.explode();
         }
         
     }
