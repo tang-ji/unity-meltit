@@ -47,6 +47,7 @@ public class FragileElement : MonoBehaviour
         
         if (M * v  > 50)
         {
+            _explodable.extraPoints = (int)(5 + Mathf.Sqrt(Mathf.Sqrt(transform.localScale.x * transform.localScale.y)));
             playSound(glassbreak, collision);
             _explodable.explode();
         }
