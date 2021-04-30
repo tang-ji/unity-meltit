@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level1Ground : MonoBehaviour
+public class Level2Ground : MonoBehaviour
 {
     private Explodable _explodable;
 
@@ -12,6 +12,8 @@ public class Level1Ground : MonoBehaviour
     private float lowPitchRange = .75F;
     private float highPitchRange = 1.5F;
     private float velToVol = .1F;
+
+    private bool isBreak;
 
     void Awake () {
         glassbreak = Resources.Load<AudioClip>("glassBreak3");
@@ -42,8 +44,11 @@ public class Level1Ground : MonoBehaviour
         // } catch(MissingComponentException e) {
         //     if (v > 5) breakable = true;
         // }
+        float f = collision.GetImpactForce();
         
-        if (collision.GetImpactForce() > 10000) {
+        // if (f > 300) print(f);
+        if (f > 600 && !isBreak) {
+            isBreak = true;
             playSound(glassbreak, collision);
             GameObject.Find("Menu").AddComponent<BoxCollider2D>();
             GameObject.Find("Menu").AddComponent<Rigidbody2D>();

@@ -42,10 +42,9 @@ public class FragileElement : MonoBehaviour
         try{
             M = Mathf.Max(collision.gameObject.GetComponent<Rigidbody2D>().mass, collision.gameObject.transform.localScale.x * collision.gameObject.transform.localScale.y);
         } catch(MissingComponentException e) {M = 100;}
-
         // playSound(glasshit2, collision);
-        
-        if (M * v  > 50)
+        float forceLimit = Mathf.Min(Mathf.Min(transform.localScale.x, transform.localScale.y) * 300, 1000);
+        if (collision.GetImpactForce() > forceLimit)
         {
             _explodable.extraPoints = (int)(5 + Mathf.Sqrt(Mathf.Sqrt(transform.localScale.x * transform.localScale.y)));
             playSound(glassbreak, collision);

@@ -10,8 +10,10 @@ public class ExplodableFragments : ExplodableAddon{
             Explodable fragExp = fragment.AddComponent<Explodable>();
 			// ExplodeOnDoubleClick fragExpdc = fragment.AddComponent<ExplodeOnDoubleClick>();
             // fragExpdc.doubleTouchDelay = 0.8f;
+            fragExp.allowRuntimeFragmentation = true;
             fragment.tag = "Clone";
             Light2D light = fragment.AddComponent<Light2D>();
+            fragment.AddComponent<FragileElement>();
             light.intensity = 0.01f;
             fragExp.shatterType = explodable.shatterType;
             fragExp.fragmentLayer = explodable.fragmentLayer;
