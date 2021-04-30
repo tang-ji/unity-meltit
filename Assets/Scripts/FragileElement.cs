@@ -39,11 +39,11 @@ public class FragileElement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         float v = collision.relativeVelocity.magnitude, m = GetComponent<Rigidbody2D>().mass, M;
-        try{M = collision.gameObject.GetComponent<Rigidbody2D>().mass;} catch(MissingComponentException e) {M = 1000;}
+        try{M = collision.gameObject.GetComponent<Rigidbody2D>().mass;} catch(MissingComponentException e) {M = 100;}
 
         // playSound(glasshit2, collision);
         
-        if (M * v / (M + m)  > 2)
+        if (M * v  > 50)
         {
             playSound(glassbreak, collision);
             _explodable.explode();

@@ -47,7 +47,7 @@ public class Buttons : MonoBehaviour
 
  	public void RestartButtonTouch()
  	{
-		Physics2D.gravity = new Vector3(0, -9.81F, 0);
+		Physics2D.gravity = new Vector3(0, -9.81f, 0);
 		SceneManager.LoadScene("level_1");
  		// Application.LoadLevel("level_1");
  	}

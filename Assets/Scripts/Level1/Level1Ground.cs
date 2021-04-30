@@ -35,10 +35,15 @@ public class Level1Ground : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         float v = collision.relativeVelocity.magnitude, m = GetComponent<Rigidbody2D>().mass, M;
-        try{M = collision.gameObject.GetComponent<Rigidbody2D>().mass;} catch(MissingComponentException e) {M = 1000;}
+        bool breakable = false;
+        try{
+            M = collision.gameObject.GetComponent<Rigidbody2D>().mass;
+            if (M * v  / (M + m)  > 0.4) breakable = true;
+        } catch(MissingComponentException e) {
+            if (v > 5) breakable = true;
+        }
         
-        if (M * v / (M + m)  > 2)
-        {
+        if (breakable) {
             playSound(glassbreak, collision);
             GameObject.Find("Menu").AddComponent<BoxCollider2D>();
             GameObject.Find("Menu").AddComponent<Rigidbody2D>();
@@ -47,6 +52,7 @@ public class Level1Ground : MonoBehaviour
             GameObject.Find("Box").AddComponent<Rigidbody2D>();
             Explodable ep = GameObject.Find("Menu").AddComponent<Explodable>();
             GameObject.Find("Bubble.Support").SetActive(false);
+            Physics2D.IgnoreLayerCollision(5, 6, false);
             ep.shatterType = Explodable.ShatterType.Voronoi;
             ep.extraPoints = 7;
             ep.subshatterSteps = 1;
