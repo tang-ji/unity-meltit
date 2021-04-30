@@ -39,7 +39,9 @@ public class FragileElement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         float v = collision.relativeVelocity.magnitude, m = GetComponent<Rigidbody2D>().mass, M;
-        try{M = collision.gameObject.GetComponent<Rigidbody2D>().mass;} catch(MissingComponentException e) {M = 100;}
+        try{
+            M = Mathf.Max(collision.gameObject.GetComponent<Rigidbody2D>().mass, collision.gameObject.transform.localScale.x * collision.gameObject.transform.localScale.y);
+        } catch(MissingComponentException e) {M = 100;}
 
         // playSound(glasshit2, collision);
         

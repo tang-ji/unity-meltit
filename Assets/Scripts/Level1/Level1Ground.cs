@@ -37,8 +37,8 @@ public class Level1Ground : MonoBehaviour
         float v = collision.relativeVelocity.magnitude, m = GetComponent<Rigidbody2D>().mass, M;
         bool breakable = false;
         try{
-            M = collision.gameObject.GetComponent<Rigidbody2D>().mass;
-            if (M * v  / (M + m)  > 0.4) breakable = true;
+            M = Mathf.Max(collision.gameObject.GetComponent<Rigidbody2D>().mass, collision.gameObject.transform.localScale.x * collision.gameObject.transform.localScale.y);
+            if (M > 10 && M * v  > 100) breakable = true;
         } catch(MissingComponentException e) {
             if (v > 5) breakable = true;
         }
