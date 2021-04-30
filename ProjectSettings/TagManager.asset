@@ -13,7 +13,7 @@ TagManager:
   - Water
   - UI
   - Main
-  - 
+  - Astronaunt
   - 
   - 
   - 
@@ -47,4 +47,7 @@ TagManager:
     locked: 0
   - name: Menu
     uniqueID: 3201220981
+    locked: 0
+  - name: Astronaunt
+    uniqueID: 84598147
     locked: 0
