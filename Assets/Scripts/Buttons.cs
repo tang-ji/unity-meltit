@@ -16,7 +16,7 @@ public class Buttons : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 1;
     }
 
     void Update()
@@ -48,7 +48,7 @@ public class Buttons : MonoBehaviour
  	public void RestartButtonTouch()
  	{
 		Physics2D.gravity = new Vector3(0, -9.81f, 0);
-		SceneManager.LoadScene("level_2");
+		SceneManager.LoadScene("PlayerTest");
  	}
 
     public void ResetButtonTouch()
